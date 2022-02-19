@@ -1,12 +1,11 @@
 {% extends 'base.html' %} {% block title %}{% endblock %} {% block main %}
 
-{% comment %} <script>
+<script>
     function myFunction() {
-      alert("All Fields Mandatory To Fill in Form");
+      alert("All Fields Mandatory To Fill in form");
     }
-    </script> {% endcomment %}
-
- 
+    </script>
+    
 
 <div class="container-fluid text-center my-2 py-2 ">
     <h1> VDF B.Tech.(Engineering) Admission Enquiry Form 2021-22 ( बी. टेक. - प्रवेश चौकशी फॉर्म)</h1>
@@ -45,15 +44,12 @@
         </div>
 
         <div class="col-md-9 ">
-            <div class="alert alert-danger" role="alert">
-                Al Fields Mandatory To Fill in Form!
-              </div>
             <form action="/registration" method="post" style="background-color: rgba(211, 206, 206, 0.027);">
                 {% csrf_token %}
                 <div class="form-comtrol ">
                     <label for="inputEmail4" class="form-label"><strong>Full Name ( पूर्ण नाव ) : (Surname, First Name, Middle name) *
 </strong> </label>
-                    <input  required type="Full Name" class="form-control" id="name" name="name">
+                    <input onclick="myFunction()" required type="Full Name" class="form-control" id="name" name="name">
                 </div>
 
                 <div class="form-comtrol">

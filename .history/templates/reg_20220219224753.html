@@ -1,13 +1,4 @@
 {% extends 'base.html' %} {% block title %}{% endblock %} {% block main %}
-
-{% comment %} <script>
-    function myFunction() {
-      alert("All Fields Mandatory To Fill in Form");
-    }
-    </script> {% endcomment %}
-
- 
-
 <div class="container-fluid text-center my-2 py-2 ">
     <h1> VDF B.Tech.(Engineering) Admission Enquiry Form 2021-22 ( बी. टेक. - प्रवेश चौकशी फॉर्म)</h1>
     <p>
@@ -45,15 +36,12 @@
         </div>
 
         <div class="col-md-9 ">
-            <div class="alert alert-danger" role="alert">
-                Al Fields Mandatory To Fill in Form!
-              </div>
             <form action="/registration" method="post" style="background-color: rgba(211, 206, 206, 0.027);">
                 {% csrf_token %}
                 <div class="form-comtrol ">
                     <label for="inputEmail4" class="form-label"><strong>Full Name ( पूर्ण नाव ) : (Surname, First Name, Middle name) *
 </strong> </label>
-                    <input  required type="Full Name" class="form-control" id="name" name="name">
+                    <input required type="Full Name" class="form-control" id="name" name="name">
                 </div>
 
                 <div class="form-comtrol">
@@ -76,10 +64,10 @@
                 <div class="form-comtrol">
                     <label for="inputEmail4" class="form-label my-2"><strong> For which course do you want to take admission?(तुम्हाला कोणत्या कोर्ससाठी प्रवेश घ्यायचा आहे? ) *</strong> </label>
                     <br>
-                    <input class="form-check-input" type="radio" id="html" name="course" value="FY">
+                    <input required class="form-check-input" type="radio" id="html" name="course" value="FY">
                     <label class="form-check-label" for="html">B.Tech. First Year ( प्रथम वर्ष 12 वी Science नंतर)</label><br>
 
-                    <input  class="form-check-input" type="radio" id="css" name="course" value="DSE">
+                    <input required class="form-check-input" type="radio" id="css" name="course" value="DSE">
                     <label for="css">B.Tech. Direct Second Year Engineering ( Dipoma-Polytechnic / B.Sc. नंतर )</label><br>
                 </div>
 
@@ -87,10 +75,10 @@
                 <div class="form-comtrol my-2">
                     <label class="form-check-label" for="inputEmail4" class="form-label my-2"><strong> B.Tech. First Year ( प्रथम वर्ष ) साठी PCM group ची सीईटी फॉर्म भरला आहे का? (फॉर्म भरण्यासाठी शेवट दिनांक 16-08-2021) *</strong> </label>
                     <br>
-                    <input  class="form-check-input" type="radio" id="by" name="ispcm" value="y">
+                    <input required class="form-check-input" type="radio" id="by" name="ispcm" value="y">
                     <label for="by">Yes</label><br>
 
-                    <input  class="form-check-input" type="radio" id="bn" name="ispcm" value="n">
+                    <input required class="form-check-input" type="radio" id="bn" name="ispcm" value="n">
                     <label class="form-check-label" for="bn">No</label><br>
                 </div>
 
@@ -98,7 +86,7 @@
                 <div class="form-comtrol">
                     <label for="cat" class="form-label my-2"><strong> Caste: (To inform you about Government Scholarship) *</strong> </label>
                     <br>
-                    <select  class="form-select" name="cast" id="select-choice">
+                    <select required class="form-select" name="cast" id="select-choice">
                                         <option value="sc/st">SC/ST</option>
                                         <option value="VJ/NT(A,B&C)">VJ/NT(A,B&C)</option>
                                         <option value="OBC">OBC</option>
@@ -114,7 +102,7 @@
                 <div class="form-comtrol">
                     <label for="inputEmail4" class="form-label my-2"><strong> Engineering Branches ( अभियांत्रिकी शाखा ) Mension interested Branch *</strong> </label>
                     <br>
-                    <input  class="form-check-input" type="radio" id="ce" name="branch" value="ce">
+                    <input required class="form-check-input" type="radio" id="ce" name="branch" value="ce">
                     <label  class="form-check-label" for="ce">Civil Engineering</label><br>
 
                     <input class="form-check-input" type="radio" id="me" name="branch" value="me">

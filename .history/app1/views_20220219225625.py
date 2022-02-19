@@ -129,8 +129,9 @@ def registration(request):
 
         fm.save()
 
-        return render(request, "succ.html")
-    return render(request, "reg.html")
+        return render(request, "reg.html")
+pass
+
 
 # about 
 
