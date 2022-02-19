@@ -3,9 +3,6 @@ from django.urls import path, include
 from app1 import views
 from django.conf import settings
 from django.conf.urls.static import static
-from django.views.static import serve 
-from django.conf.urls import url
-
 
 
 urlpatterns = [
@@ -56,14 +53,13 @@ urlpatterns = [
 
     path("aqar2019_2020", views.aqar2019_2020, name="aqar2019_2020"),
     path("aqar2020_2021", views.aqar2020_2021, name="aqar2020_2021"),
-    path("naac", views.mnaac, name="nacc"),
+    path("naac", views.mnaac, name="nacc")
     
-
-    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
-
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
+    handler404 = 'myappname.views.error_404'
+handler500 = 'myappname.views.error_500'
+handler403 = 'myappname.views.error_403'
+handler400 = 'myappname.views.error_400'
 
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
-

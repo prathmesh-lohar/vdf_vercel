@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$j!6(vs@r+=_e_!f)s&ji^xp$m3e325(3%v-(op+tr7+09y&y)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -123,35 +123,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-# STATIC_URL = '/static/'
-# STATIC_ROOT = 'd:/clgproject/vdf/static/'
-
-# # Added manually
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, "static") 
-# ]
-
-
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
-# MEDIA_URL = '/media/'
-
 STATIC_URL = '/static/'
+STATIC_ROOT = 'd:/clgproject/vdf/static/'
 
+# Added manually
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static") 
+]
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
 MEDIA_URL = '/media/'
-
-  
-
-if DEBUG:
-
-  STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-
-else:
-
-  STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-  
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Default primary key field type

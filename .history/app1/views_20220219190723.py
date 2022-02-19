@@ -249,12 +249,4 @@ def mnaac(request):
     return render(request, "naac/mnaac.html",data)
 
 
-# 4040
-
-def error_404_view(request, exception):
-    data = {"name": "ThePythonDjango.com"}
-    return render(request,'error_404.html', data)
-
-
-
 

@@ -253,7 +253,7 @@ def mnaac(request):
 
 def error_404_view(request, exception):
     data = {"name": "ThePythonDjango.com"}
-    return render(request,'error_404.html', data)
+    return render(request,'myapp/error_404.html', data)
 
 
 

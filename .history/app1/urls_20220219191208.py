@@ -3,9 +3,7 @@ from django.urls import path, include
 from app1 import views
 from django.conf import settings
 from django.conf.urls.static import static
-from django.views.static import serve 
-from django.conf.urls import url
-
+from django.conf.urls import handler404
 
 
 urlpatterns = [
@@ -56,14 +54,10 @@ urlpatterns = [
 
     path("aqar2019_2020", views.aqar2019_2020, name="aqar2019_2020"),
     path("aqar2020_2021", views.aqar2020_2021, name="aqar2020_2021"),
-    path("naac", views.mnaac, name="nacc"),
+    path("naac", views.mnaac, name="nacc")
     
-
-    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
-
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
-
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
 
+handler404 = 'app1.views.error_404_view'

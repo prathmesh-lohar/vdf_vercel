@@ -249,12 +249,12 @@ def mnaac(request):
     return render(request, "naac/mnaac.html",data)
 
 
-# 4040
+from django.shortcuts import render
 
-def error_404_view(request, exception):
-    data = {"name": "ThePythonDjango.com"}
-    return render(request,'error_404.html', data)
+def error_404(request, exception):
+        data = {}
+        return render(request,'certman/404.html', data)
 
-
-
-
+def error_500(request,  exception):
+        data = {}
+        return render(request,'certman/500.html', data)
