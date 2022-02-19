@@ -127,6 +127,3 @@ class viewer(models.Model):
 class recruter(models.Model):
     name = models.CharField(max_length=200)
     img = models.ImageField(upload_to="images/")
-    
-    def __str__(self):
-        return self.name
