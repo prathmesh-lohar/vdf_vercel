@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import gallery
 from .models import page,mediaimg
 from .models import mediafile
-from .models import registration
+from .models import registration,contact
 from .models import news,mou,viewer,naac,recruter
 # Register your models here.
 
@@ -26,3 +26,5 @@ admin.site.register(naac)
 admin.site.register(viewer)
 
 admin.site.register(recruter)
+
+admin.site.register(contact)

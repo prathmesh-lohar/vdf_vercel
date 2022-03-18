@@ -130,3 +130,16 @@ class recruter(models.Model):
     
     def __str__(self):
         return self.name
+
+
+
+    
+class contact(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    subject = models.CharField(max_length=200)
+    msg = models.CharField(max_length=200)
+   
+    
+    def __str__(self):
+        return self.name

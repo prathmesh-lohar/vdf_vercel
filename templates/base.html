@@ -180,6 +180,9 @@
           display: block;
         }
       }
+      p{
+        text-align: justify;
+      }
     </style>
 
     <script></script>
@@ -189,9 +192,9 @@
     {% load static %}
 
     <div style="width: 100%; height: 30px; background-color: #8c900e">
-      <div class="container desk-ico">
+      <div class="container-fluid desk-ico">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <span class="btn btn-outline-light btn-sm fa fa-phone rounded-">
               | 0 2382 267732
             </span>
@@ -206,11 +209,56 @@
                   color: #f9f9f9;
                   border-color: #f9f9f9;
                   text-decoration: none;
+                  
                 "
               >
                 | YouTube</span
               ></a
             >
+
+            <a href="https://www.facebook.com/VilasraoDeshmukhFoundation/">
+              <span
+                class="btn btn-outline-primary btn-sm fa fa-facebook"
+                style="
+                  color: #f9f9f9;
+                  border-color: #f9f9f9;
+                  text-decoration: none;
+                "
+              >
+                | Facebook</span
+              ></a
+            >
+  
+            <a href="https://www.linkedin.com/in/vdf-soet-latur-b221b8216">
+              <span
+                class="btn btn-outline-info btn-sm fa fa-linkedin"
+                style="
+                  color: #f9f9f9;
+                  border-color: #f9f9f9;
+                  text-decoration: none;
+                "
+              >
+                | Linkedin</span
+              ></a
+            >
+
+
+              
+            <a >
+              <span
+                class="btn btn-outline-dark btn-sm fa fa-address-card"
+                style="
+                  color: #f9f9f9;
+                  border-color: #f9f9f9;
+                  text-decoration: none;
+                  float: right;
+                  border: 0;
+                "
+              >
+                | New MIDC, Airport Road , Latue - 413531</span
+              ></a
+            >
+
           </div>
         </div>
       </div>
@@ -239,13 +287,13 @@
             >
               <span class="fa fa-phone"></span><strong> | 0 2382 267732</strong>
             </button>
-            <a href="/naac" style="text-decoration: none;"> 
+            <a href="https://www.youtube.com/channel/UC9_ASWhPKsHIyMw0547UIdQ" style="text-decoration: none;"> 
             <button
                 class="btn text-white btn-sm rounded-0 b"
                 style="background-color: #ff1f1f60; font-size: 12px"
                
               >
-                <strong> NAAC</strong>
+                <strong><span class="fa fa-youtube"> </span> YouTube</strong>
               </button>
               </a>
           
@@ -284,7 +332,7 @@
             class="text-center desk-head my-2"
             style="text-transform: uppercase"
           >
-            School of Engineering & TECHNOLOGY, Latur
+            VDF School of Engineering & TECHNOLOGY, Latur
           </h1>
           <!-- <span style="">विलासराव देशमुख फाउंडेशन, लातूर </span> -->
         </div>
@@ -351,7 +399,7 @@
           class="navbar-brand mob-head mr-auto mx-auto"
           href="/"
           style="font-size: 18px"
-          >SCHOOL OF ENGINEERING & TECHNOLOGY, LATUR
+          >VDF SCHOOL OF ENGINEERING & TECHNOLOGY, LATUR
         </a>
         <br />
         <!-- <button class="fa fa-bars text-white btn btn-outline-light navbar-toggler " style="font-size: 20px;" type="button"
@@ -566,7 +614,7 @@
                   <hr class="dropdown-divider" />
                 </li>
                 <li>
-                  <a class="dropdown-item text-white" href="#"
+                  <a class="dropdown-item text-white" href="/pages/centralcomputing"
                     >Central Computing</a
                   >
                 </li>
@@ -574,7 +622,7 @@
                   <hr class="dropdown-divider" />
                 </li>
                 <li>
-                  <a class="dropdown-item text-white" href="#"> Play Ground </a>
+                  <a class="dropdown-item text-white" href="/pages/playground"> Play Ground </a>
                 </li>
               </ul>
             </li>
@@ -687,6 +735,13 @@
               </ul>
             </li>
 
+
+            <li class="nav-item">
+              <a class="nav-link active bornav" aria-current="page" href="/contact_us"
+                >Contact Us
+              </a>
+            </li>
+
             <li
               class="nav-item  text-center mmou"
               style=""
@@ -701,7 +756,7 @@
               
             </li>
 
-            <li
+            {% comment %} <li
             class="nav-item  text-center mnaac"
             style=""
           >
@@ -710,7 +765,7 @@
               role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
             
               >NAAC
-            </span>
+            </span> {% endcomment %}
 
             <ul class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuLink">
 
@@ -720,26 +775,7 @@
               {% endfor %} {% endcomment %}
 
              
-<li><a class="dropdown-item" href="/aqar2020_2021"><span class="fa fa-arrow-right" style="color: green;"> </span> AQAR 2020-2021 </a></li>
-  
-              <li><a class="dropdown-item" href="/aqar2019_2020"><span class="fa fa-arrow-right" style="color: green;"> </span> AQAR 2019-2020  </a></li>
-              <li><a class="dropdown-item" href="#"><span class="fa fa-arrow-right" style="color: green;"> </span> IQAC  </a></li>
-  
-              <li><a class="dropdown-item" href="#"><span class="fa fa-arrow-right" style="color: green;"> </span> AQAR  </a></li>
-              <li><a class="dropdown-item" href="#"><span class="fa fa-arrow-right" style="color: green;"> </span> NAAC SSR </a></li>
-  
-              <li><a class="dropdown-item" href="#"><span class="fa fa-arrow-right" style="color: green;"> </span> NAAC DVV  </a></li>
-              <li><a class="dropdown-item" href="#"><span class="fa fa-arrow-right" style="color: green;"> </span> NAAC Re-DVV </a></li>
-  
-              <li><a class="dropdown-item" href="#"><span class="fa fa-arrow-right" style="color: green;"> </span> NAAC Peer Team Visit  </a></li>
-              <li><a class="dropdown-item" href="#"><span class="fa fa-arrow-right" style="color: green;"> </span> NAAC Peer Team Visit Report </a></li>
-  
-              <li><a class="dropdown-item" href="#"><span class="fa fa-arrow-right" style="color: green;"> </span>NAAC Certificate Accreditation  </a></li>
- 
-          </ul>
 
-            
-          </li>
           </ul>
         </div>
       </div>
@@ -776,6 +812,8 @@
     </style>
 
     {% block main %} {% endblock %}
+
+    <a href="javascript:history.go(-1)" style="height:65px;width:65px;margin-top: 15px; left:auto;margin: 50px;" class="btn btn-danger fa-lg rounded-circle fixed-bottom"><span class="fa-lg fa fa-arrow-left" style="    margin-top: 14px;"> </span></a>
 
     <footer class="mainfooter" role="contentinfo">
       {% load hitcount_tags %}
@@ -820,6 +858,10 @@
                     ><i class="fa fa-youtube"></i
                   ></a>
                 </li>
+
+
+
+
               </ul>
             </div>
           </div>
@@ -944,6 +986,11 @@
         background-color: #f9f9f9;
       }
     </style>
+
+
+
+
+    
 
     <!-- footer -->
 

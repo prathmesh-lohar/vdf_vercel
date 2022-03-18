@@ -21,6 +21,7 @@ urlpatterns = [
     path("news/<str:link>", views.news, name="news"),
     path("mou/<str:link>", views.mou, name="mou"),
     path("mous",views.mous, name="mous"),
+    path("contact_us",views.contact_us, name="contact_us"),
 
 
 # abot

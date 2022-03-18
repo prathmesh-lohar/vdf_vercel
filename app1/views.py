@@ -1,6 +1,7 @@
+import re
 from django.db.models.fields import SlugField
 from django.http import request
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import redirect, render,HttpResponse
 from .models import gallery
 from .models import page
 from hitcount.views import HitCountDetailView
@@ -247,6 +248,26 @@ def mnaac(request):
     }
 
     return render(request, "naac/mnaac.html",data)
+
+
+
+def contact_us(request):
+
+    
+    if request.method=="POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('sub')
+        msg = request.POST.get('msg')
+        from app1.models import contact
+
+        ob = contact(name=name, email=email, subject=subject, msg=msg)
+        ob.save()
+
+        return render(request, "contactus.html")
+
+
+    return render(request, "contactus.html")
 
 
 # 4040
