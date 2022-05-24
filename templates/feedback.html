@@ -1,0 +1,55 @@
+{% extends "base.html" %} {% block title %} {% endblock %} {% block main %}
+
+
+<div class="container">
+
+
+    <h2 class="text-center my-4">Feedback</h2>
+
+<form action="/feedback" method="post">
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Full Name</label>
+        <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp">
+        
+     </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1"  class="form-label">Email Address</label>
+      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      
+    </div>
+    
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Mobile Number</label>
+        <input type="number" name="mobile"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        
+      </div>
+
+      {% csrf_token %}
+
+
+      <label for="" class="form-label">How Did You Hear About Us</label>      
+      <select name="wfrom" class="form-select form-select-md mb-3" aria-label=".form-select-lg example">
+        <option selected>Open this select menu</option>
+        <option value="Google">Google</option>
+        <option value="Social">Social Media</option>
+        <option value="studstaff">By Student/Staff</option>
+      </select>
+
+
+      <label for="" class="form-label">Write Your Comments Bellow</label>
+
+      <textarea name="cmt" class="form-control">
+
+      </textarea>
+
+
+    <button type="submit" class="btn btn-success my-3">Submit</button>
+  </form>
+
+      
+</div>
+
+
+
+{% endblock %}

@@ -30,6 +30,8 @@ urlpatterns = [
     path("pmassage", views.pmassage, name="pmassage"),
     path("primassage", views.primassage, name="primassage"),
 
+    path("feedback", views.feedback, name="feedback"),
+
     
     
 

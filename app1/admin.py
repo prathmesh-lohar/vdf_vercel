@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import gallery
+from .models import feedback, gallery,feedback
 from .models import page,mediaimg
 from .models import mediafile
 from .models import registration,contact
@@ -28,3 +28,5 @@ admin.site.register(viewer)
 admin.site.register(recruter)
 
 admin.site.register(contact)
+
+admin.site.register(feedback)

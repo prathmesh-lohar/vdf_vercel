@@ -2,6 +2,7 @@ from django.db import models
 from PIL import Image
 from ckeditor.fields import RichTextField
 from django.db.models.aggregates import Max
+from django.forms import IntegerField
 # Create your models here.
 
 
@@ -139,6 +140,19 @@ class contact(models.Model):
     email = models.CharField(max_length=200)
     subject = models.CharField(max_length=200)
     msg = models.CharField(max_length=200)
+   
+    
+    def __str__(self):
+        return self.name
+
+
+
+class feedback(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    
+    wfrom=models.CharField(max_length=200)
+    cmt=models.TextField()
    
     
     def __str__(self):

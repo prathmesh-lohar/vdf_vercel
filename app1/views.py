@@ -276,6 +276,23 @@ def error_404_view(request, exception):
     data = {"name": "ThePythonDjango.com"}
     return render(request,'error_404.html', data)
 
+def feedback(request):
+    
+    if request.method=="POST":
+        name = request.POST.get('name')
+       # phone = request.POST.get('phone')
+        email = request.POST.get('email')
+        wfrom = request.POST.get('wfrom')
+        cmt = request.POST.get('cmt')
+
+        from .models import feedback
+
+        fd = feedback(name=name,email=email,wfrom=wfrom,cmt=cmt)
+
+        fd.save()
+        return render(request,'succ.html')
+
+    return render(request,'feedback.html')
 
 
 
