@@ -264,7 +264,7 @@ def contact_us(request):
         ob = contact(name=name, email=email, subject=subject, msg=msg)
         ob.save()
 
-        return render(request, "contactus.html")
+        return render(request, "succ.html")
 
 
     return render(request, "contactus.html")
