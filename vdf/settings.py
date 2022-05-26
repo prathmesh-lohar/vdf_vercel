@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$j!6(vs@r+=_e_!f)s&ji^xp$m3e325(3%v-(op+tr7+09y&y)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ckeditor',
     'hitcount',
+    'import_export'
 ]
 
 MIDDLEWARE = [
@@ -139,7 +140,7 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 
-  
+IMPORT_EXPORT_USE_TRANSACTIONS = True
 
 if DEBUG:
 

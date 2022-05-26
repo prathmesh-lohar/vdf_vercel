@@ -88,6 +88,9 @@ def placement2021(request):
 
     return render(request, "place.html")
 
+def placement2022(request):
+    return render(request, "pacement2022.html")
+
 def library(request):
 
     return render(request, "library.html")

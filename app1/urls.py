@@ -17,6 +17,9 @@ urlpatterns = [
     path("library", views.library, name="library"),
     path("workshop", views.workshop, name="workshop"),
     path("placement2021", views.placement2021, name="placement2021"),
+    path("placement2022", views.placement2022, name="placement2022"),
+
+    
     path("registration",views.registration, name="registration"),
     path("news/<str:link>", views.news, name="news"),
     path("mou/<str:link>", views.mou, name="mou"),

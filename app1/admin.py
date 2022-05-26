@@ -4,6 +4,9 @@ from .models import page,mediaimg
 from .models import mediafile
 from .models import registration,contact
 from .models import news,mou,viewer,naac,recruter
+
+from import_export import resources
+from import_export.admin import ImportExportModelAdmin
 # Register your models here.
 
 
@@ -15,7 +18,24 @@ admin.site.register(mediaimg)
 
 admin.site.register(mediafile)
 
-admin.site.register(registration)
+
+@admin.register(registration)
+class registrationAdmin(ImportExportModelAdmin):
+    pass
+
+
+@admin.register(contact)
+class contactAdmin(ImportExportModelAdmin):
+    pass
+
+
+@admin.register(feedback)
+class registrationAdmin(ImportExportModelAdmin):
+    pass
+
+    #resource_class = registration
+
+#admin.site.register(registration,registrationAdmin)
 
 admin.site.register(news)
 
@@ -27,6 +47,4 @@ admin.site.register(viewer)
 
 admin.site.register(recruter)
 
-admin.site.register(contact)
 
-admin.site.register(feedback)
