@@ -3,13 +3,13 @@ from .models import feedback, gallery,feedback
 from .models import page,mediaimg
 from .models import mediafile
 from .models import registration,contact
-from .models import news,mou,viewer,naac,recruter
+from .models import news,mou,viewer,naac,recruter,pop
 
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 # Register your models here.
 
-
+admin.site.register(pop)
 admin.site.register(page)
 
 admin.site.register(gallery)

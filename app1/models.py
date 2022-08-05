@@ -1,3 +1,4 @@
+from turtle import title
 from django.db import models
 from PIL import Image
 from ckeditor.fields import RichTextField
@@ -157,3 +158,9 @@ class feedback(models.Model):
     
     def __str__(self):
         return self.name
+
+class pop(models.Model):
+    img = models.ImageField(upload_to="app1/gallery/imgs", default="")
+    title = models.CharField(max_length=200)
+    def __str__(self):
+        return self.title

@@ -40,13 +40,26 @@ def home(request):
     print("ip"+ip)
     from .models import recruter
     rec = recruter.objects.all().order_by('-id')
+
+    from.models import pop
+
+    f=pop.objects.all()[0]
+    p=pop.objects.all()[1:]
+
     data={
         'gal':gal,
         'news':news,
         'visit':visit,
         'rec':rec,
+        'p':p,
+        'f':f,
     }
     # return HttpResponse("wellcome")
+
+    
+
+
+
     return render(request, "home.html", data)
 
 
