@@ -86,7 +86,7 @@ class mou(models.Model):
     title = models.CharField(max_length=500)
     link = models.CharField(max_length=500)
 
-    logo = models.ImageField( upload_to="images/mou/logo")
+    logo = models.ImageField(blank=True, null=True , default='app1/media/imgs/blank_P9xJb40.png',  upload_to="images/mou/logo")
 
     body = RichTextField(blank=True, null=True)
 
