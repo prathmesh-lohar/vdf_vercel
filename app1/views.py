@@ -310,5 +310,8 @@ def feedback(request):
 
     return render(request,'feedback.html')
 
+def ilad(request):
+    return render(request,'ilad.html')
+
 
 

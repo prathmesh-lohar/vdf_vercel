@@ -58,6 +58,8 @@ urlpatterns = [
     path("facme", views.facme, name="facme"),
     path("facas", views.facas, name="facas"),
 
+    path("ilad", views.ilad, name="ilad"),
+
 # naac
 
     path("aqar2019_2020", views.aqar2019_2020, name="aqar2019_2020"),
