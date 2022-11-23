@@ -7,6 +7,9 @@ from .models import page
 from hitcount.views import HitCountDetailView
 from .models import naac
 import os
+
+import string 
+import random 
 # Create your views here.
 
 def get_client_ip(request):
@@ -16,6 +19,8 @@ def get_client_ip(request):
     else:
         ip = request.META.get('REMOTE_ADDR')
     return ip
+
+
 
 
 
@@ -124,7 +129,7 @@ def news(request,link):
 
 def registration(request):
 
-
+    funcap3 = capcode()
     if request.method=="POST":
         name = request.POST.get('name')
         phone = request.POST.get('phone')
@@ -139,15 +144,20 @@ def registration(request):
 
         oib=request.POST.getlist('oib')
 
-  
-        from .models import registration
- 
-        fm = registration(name=name, contact=phone, wp=wp, address=address, course=course, is_pcm=ispcm, cast=cast, mission_branch=ibranch, is_loan=loan, is_instalment=insta, other_interasted_branches=oib)
+        hstr = request.POST.get('hstr')
+        cap = request.POST.get('cap')
 
-        fm.save()
+        if str(hstr) == str(cap):
+            from .models import registration
+    
+            fm = registration(name=name, contact=phone, wp=wp, address=address, course=course, is_pcm=ispcm, cast=cast, mission_branch=ibranch, is_loan=loan, is_instalment=insta, other_interasted_branches=oib)
 
-        return render(request, "succ.html")
-    return render(request, "reg.html")
+            fm.save()
+            return render(request, "succ.html")
+        else:
+            return HttpResponse("<h1>Invalid Capture Code</H1> <h5>Go Back And Resubmit Form With Correct Capture Code Shown In Box</h5>")
+        
+    return render(request, "reg.html",{'funcap3':funcap3})
 
 # about 
 
@@ -269,21 +279,29 @@ def mnaac(request):
 
 def contact_us(request):
 
-    
+    funcap2  = capcode()    
     if request.method=="POST":
         name = request.POST.get('name')
         email = request.POST.get('email')
         subject = request.POST.get('sub')
         msg = request.POST.get('msg')
-        from app1.models import contact
+        hstr = request.POST.get('hstr')
+        cap = request.POST.get('cap')
 
-        ob = contact(name=name, email=email, subject=subject, msg=msg)
-        ob.save()
+        if str(hstr) == str(cap):
+        
+            from app1.models import contact
 
-        return render(request, "succ.html")
+            ob = contact(name=name, email=email, subject=subject, msg=msg)
+            ob.save()
+
+            return render(request, "succ.html")
+        else:
+             return HttpResponse("<h1>Invalid Capture Code</H1> <h5>Go Back And Resubmit Form With Correct Capture Code Shown In Box</h5>")
+        
 
 
-    return render(request, "contactus.html")
+    return render(request, "contactus.html",{'funcap2':funcap2})
 
 
 # 4040
@@ -292,8 +310,16 @@ def error_404_view(request, exception):
     data = {"name": "ThePythonDjango.com"}
     return render(request,'error_404.html', data)
 
+def capcode():
+    N = 5
+    res = ''.join(random.choices(string.ascii_uppercase +  string.digits, k = N)) 
+    strres = str(res)
+    return strres
+
+
+
 def feedback(request):
-    
+    funcap = capcode()
     if request.method=="POST":
         name = request.POST.get('name')
        # phone = request.POST.get('phone')
@@ -301,14 +327,22 @@ def feedback(request):
         wfrom = request.POST.get('wfrom')
         cmt = request.POST.get('cmt')
 
-        from .models import feedback
+        hstr = request.POST.get('hstr')
+        cap = request.POST.get('cap')
 
-        fd = feedback(name=name,email=email,wfrom=wfrom,cmt=cmt)
 
-        fd.save()
-        return render(request,'succ.html')
+        if str(hstr) == str(cap):
+            from .models import feedback
 
-    return render(request,'feedback.html')
+            fd = feedback(name=name,email=email,wfrom=wfrom,cmt=cmt)
+
+            fd.save()
+            return render(request,'succ.html')
+        else:
+            return HttpResponse("<h1>Invalid Capture Code</H1> <h5>Go Back And Resubmit Form With Correct Capture Code Shown In Box</h5>")
+        
+
+    return render(request,'feedback.html',{'funcap':funcap})
 
 def ilad(request):
     return render(request,'ilad.html')

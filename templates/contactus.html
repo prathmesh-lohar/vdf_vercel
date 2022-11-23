@@ -51,9 +51,27 @@
                       <div class="input-group mb-2 mb-0">
                          <textarea required class="form-control" name="msg">
                          </textarea>
-
-                        
                       </div>
+<center>
+                      <canvas class="my-2" id="myCanvas" width="150" height="40" style="border:1px solid #d3d3d3;">
+                        Captcha</canvas>
+                        <br>
+
+                        <input name="hstr" type="hidden" value="{{funcap2}}">
+
+                        <input required name="cap" type="text" placeholder="Enter Abhove Letters">
+                     </center>
+
+                         <script>
+                         var c = document.getElementById("myCanvas");
+                         var ctx = c.getContext("2d");
+                         ctx.font = "30px Arial";
+                         ctx.strokeText("{{funcap2}}",5,25);
+                         ctx.moveTo(0, 0);
+                         ctx.lineTo(200, 80);
+                         ctx.stroke();
+                         </script>
+
                    </div>
                    <div class="text-center my-2">
                       <input type="submit" name="submit" value="submit" class="btn btn-primary btn-block rounded-0 py-2">
