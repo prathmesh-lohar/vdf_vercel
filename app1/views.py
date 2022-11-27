@@ -49,7 +49,7 @@ def home(request):
     from.models import pop
 
     f=pop.objects.all()[0]
-    p=pop.objects.all()[1:]
+    p=pop.objects.all().order_by('-id')
 
     data={
         'gal':gal,

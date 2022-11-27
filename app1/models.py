@@ -160,7 +160,7 @@ class feedback(models.Model):
         return self.name
 
 class pop(models.Model):
-    img = models.ImageField(upload_to="app1/gallery/imgs", default="")
+    img = models.ImageField(upload_to="app1/pop/imgs", default="")
     title = models.CharField(max_length=200)
     def __str__(self):
         return self.title
