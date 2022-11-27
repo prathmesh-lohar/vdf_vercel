@@ -347,5 +347,11 @@ def feedback(request):
 def ilad(request):
     return render(request,'ilad.html')
 
+def ilfy(request):
+    return render(request,'ilfy.html')
+
+def ildse(request):
+    return render(request,'ildse.html')
+
 
 

@@ -59,6 +59,10 @@ urlpatterns = [
     path("facas", views.facas, name="facas"),
 
     path("ilad", views.ilad, name="ilad"),
+    path("ilfy", views.ilfy, name="ilfy"),
+    path("ildse", views.ildse, name="ildse"),
+
+    
 
 # naac
 
