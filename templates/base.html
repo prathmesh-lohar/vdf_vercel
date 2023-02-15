@@ -306,6 +306,18 @@
                 <strong>MOU</strong>
               </button></a
             >
+
+            <a href="/pages/NAAC">
+              <button
+                class="btn text-white btn-sm rounded-0 b "
+               
+                style="background-color: #c8000a86; font-size: 12px"
+              >
+                <strong>NAAC</strong>
+              </button></a
+            >
+
+
           </center>
         </div>
       </div>
@@ -436,7 +448,7 @@
           Menu
         </button>
 
-        <div class="collapse navbar-collapse mr-auto" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse mr-auto" id="navbarNavDropdown" style="font-size: 15px;">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
               <a class="nav-link active bornav" aria-current="page" href="/"
@@ -903,8 +915,152 @@
             </li>
 
 
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active bornav"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+              Alumini
+              </a>
+              <ul
+                class="dropdown-menu primary-bg text-white"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <a class="dropdown-item text-white" href="/aluminireg"
+                    >Alumini Registration</a
+                  >
+                </li>
+
+                <!-- <li>
+                  <hr class="dropdown-divider" />
+                </li> -->
+
+           
+         
+          
+              </ul>
+            </li>
+
+
+
+
+            
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active bornav"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+              IQAC
+              </a>
+              <ul
+                class="dropdown-menu primary-bg text-white"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <a class="dropdown-item text-white" href="#"
+                    >IQAC Cell</a
+                  >
+                </li>
+
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+
+                <li>
+                  <a class="dropdown-item text-white" href="#"
+                    >IQAC Meeting</a
+                  >
+                </li>
+
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+
+                <li>
+                  <a class="dropdown-item text-white" href="#"
+                    >Academic Calanders</a
+                  >
+                </li>
+
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+
+                <li>
+                  <a class="dropdown-item text-white" href="#"
+                    >Feedback</a
+                  >
+                </li>
+
+                <!-- <li>
+                  <hr class="dropdown-divider" />
+                </li> -->
+         
+          
+              </ul>
+            </li>
+
+
+            <!-- <li
+            class="nav-item  text-center  mx-2"
+            style="background-color: rgb(226, 43, 43);"
+          >
+            <a
+              class="nav-link active text-center "
+              aria-current="page"
+              href="#"
+              >NAAC
+            </a>
+
+            
+          </li> -->
+
+
+
+
+          <li
+          class="nav-item  text-center mnaac"
+          style=""
+        >
+          <span
+            class="nav-link active text-center"
+            role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
+          
+            >NAAC
+          </span>
+
+          <ul class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuLink">
+
+            {% comment %} {% for i in show_naac %}
+
+            <li><a class="dropdown-item" href="#"><span class="fa fa-arrow-right" style="color: green;"> </span> {{i}} </a></li>
+            {% endfor %} {% endcomment %}
+
+           
+            <li><a class="dropdown-item" href="#"><span class="fa fa-arrow-right" style="color: green;"> </span> 1.3.1 </a></li>
+  
+            <li><a class="dropdown-item" href="#"><span class="fa fa-arrow-right" style="color: green;"> </span> 2.3.1 (ICT)  </a></li>
+            <li><a class="dropdown-item" href="#"><span class="fa fa-arrow-right" style="color: green;"> </span> Program Outcomes & <br>Cource Outcomes (CO&PO's)  </a></li>
+
+        
+        </ul>
+
+          
+        </li>
+
+
             <li
-              class="nav-item  text-center mmou"
+              class="nav-item  text-center mmou mx-1
               style=""
             >
               <a
@@ -917,8 +1073,11 @@
               
             </li>
 
+
+      
+
             <li class="nav-item">
-              <a class="nav-link active mx-4 text-center" style="    background-color: blueviolet;" aria-current="page" href="/pages/Grievance_Redressal_Cell"
+              <a class="nav-link active   mx-1 text-center" style="    background-color: blueviolet;" aria-current="page" href="/pages/Grievance_Redressal_Cell"
                 >Grievance Redressal Cell
               </a>
             </li>
@@ -954,7 +1113,7 @@
       .mmou{
         background-color: #fa944b; 
         width: 50px;
-        margin-left: 60px;
+        
 
       }
       .mnaac{

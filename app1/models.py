@@ -164,3 +164,22 @@ class pop(models.Model):
     title = models.CharField(max_length=200)
     def __str__(self):
         return self.title
+
+
+class alumini(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    mobile = models.CharField(max_length=200)
+    yop = models.CharField(max_length=200)
+    dob = models.CharField(max_length=200)
+    maritalstaus = models.CharField(max_length=200)
+    profession = models.CharField(max_length=200)
+    address = models.TextField()
+    aftergraduation =  models.TextField()
+    memorie = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
+

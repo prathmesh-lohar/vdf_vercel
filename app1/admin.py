@@ -3,7 +3,7 @@ from .models import feedback, gallery,feedback
 from .models import page,mediaimg
 from .models import mediafile
 from .models import registration,contact
-from .models import news,mou,viewer,naac,recruter,pop
+from .models import news,mou,viewer,naac,recruter,pop,alumini
 
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
@@ -17,6 +17,9 @@ admin.site.register(gallery)
 admin.site.register(mediaimg)
 
 admin.site.register(mediafile)
+
+admin.site.register(alumini)
+
 
 
 @admin.register(registration)

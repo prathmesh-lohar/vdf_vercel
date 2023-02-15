@@ -69,7 +69,10 @@ urlpatterns = [
     path("aqar2019_2020", views.aqar2019_2020, name="aqar2019_2020"),
     path("aqar2020_2021", views.aqar2020_2021, name="aqar2020_2021"),
     path("naac", views.mnaac, name="nacc"),
-    
+
+
+
+    path("aluminireg", views.aluminireg, name="aluminireg"),
 
     url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
 

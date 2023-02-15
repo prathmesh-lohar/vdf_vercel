@@ -275,6 +275,52 @@ def mnaac(request):
 
     return render(request, "naac/mnaac.html",data)
 
+def aluminireg(request):
+    funcapal = capcode()
+    if request.method=="POST":
+        
+        fname = request.POST.get('fname')
+        lname = request.POST.get('lname')
+        email = request.POST.get('email')
+        
+        mobile = request.POST.get('mobile')
+        yop = request.POST.get('yop')
+        dob = request.POST.get('dob')
+        maritalstaus = request.POST.get('maritalstaus')
+        profession = request.POST.get('profession')
+        add = request.POST.get('add')
+        add2 = request.POST.get('add2')
+        city = request.POST.get('city')
+        state = request.POST.get('state')
+        zip = request.POST.get('zip')
+        aftergraduation = request.POST.get('aftergraduation')
+        memorie = request.POST.get('memorie')
+        hstr = request.POST.get('hstr')
+        cap = request.POST.get('cap')
+
+        name = fname+" "+lname
+        address = add+" "+add2+" "+city+" "+state+" "+zip
+   
+        strmobile=str(mobile)
+        stryop=str(yop)
+        strdob=str(dob)
+        stremail1=str(email)
+        print(email)
+
+
+        if str(hstr) == str(cap):
+        
+            from app1.models import alumini
+
+            ob = alumini(name=name, email=stremail1, mobile=strmobile, yop=stryop, dob=strdob, maritalstaus=maritalstaus, profession=profession,address=address,aftergraduation=aftergraduation,memorie=memorie)
+            ob.save()
+
+            return render(request, "succ.html")
+        else:
+             return HttpResponse("<h1>Invalid Capture Code</H1> <h5>Go Back And Resubmit Form With Correct Capture Code Shown In Box</h5>")
+        
+    return render(request, "naac/aluminireg.html",{'funcapal':funcapal})
+
 
 
 def contact_us(request):
@@ -351,6 +397,7 @@ def ilfy(request):
     return render(request,'ilfy.html')
 
 def ildse(request):
+
     return render(request,'ildse.html')
 
 
