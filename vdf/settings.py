@@ -27,8 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-CORS_ALLOWED_ORIGINS =['https://*www.vdfengineering.co.in/']
-
+#CORS_ALLOWED_ORIGINS =['https://*www.vdfengineering.co.in/']
+CORS_ALLOWED_ORIGINS = ['https://*www.vdfengineering.co.in/','https://www.vdfengineering.co.in/aluminireg','https://www.vdfengineering.co.in/*']
+CSRF_TRUSTED_ORIGINS = ['https://*www.vdfengineering.co.in/','https://www.vdfengineering.co.in/aluminireg','https://www.vdfengineering.co.in/*']
 
 # Application definition
 
