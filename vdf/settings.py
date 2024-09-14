@@ -77,7 +77,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'vdf.wsgi.application'
+# WSGI_APPLICATION = 'vdf.wsgi.application'
+WSGI_APPLICATION = 'vdf.wsgi.app'
 
 
 # Database
